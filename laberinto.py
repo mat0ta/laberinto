@@ -1,5 +1,6 @@
 from random import *
 import os
+import time
 
 laberinto = []
 
@@ -19,8 +20,6 @@ print(laberinto[2])
 print(laberinto[3])
 print(laberinto[4])
 
-# os.system('cls')
-
 posicion = [0, 0]
 terminado = False
 movimientos = []
@@ -34,6 +33,13 @@ while not terminado:
         laberinto[posicion[0]][posicion[1]] = '.'
         movimientos.append('Abajo')
         i =+ 1
+        os.system('cls')
+        print(laberinto[0])
+        print(laberinto[1])
+        print(laberinto[2])
+        print(laberinto[3])
+        print(laberinto[4])
+        time.sleep(1)
     else:
         posicion[0] = posicion[0] - 1
         posicion[1] = posicion[1] + 1
@@ -41,6 +47,13 @@ while not terminado:
             laberinto[posicion[0]][posicion[1]] = '.'
             movimientos.append('Derecha')
             i =+ 1
+            os.system('cls')
+            print(laberinto[0])
+            print(laberinto[1])
+            print(laberinto[2])
+            print(laberinto[3])
+            print(laberinto[4])
+            time.sleep(1)
         else:
             posicion[1] = posicion[1] - 1
             posicion[0] = posicion[0] - 1
@@ -48,6 +61,13 @@ while not terminado:
                 laberinto[posicion[0]][posicion[1]] = '.'
                 movimientos.append('Arriba')
                 i =+ 1
+                os.system('cls')
+                print(laberinto[0])
+                print(laberinto[1])
+                print(laberinto[2])
+                print(laberinto[3])
+                print(laberinto[4])
+                time.sleep(1)
             else:
                 posicion[0] = posicion[0] + 1
                 posicion[1] = posicion[1] - 1
@@ -55,4 +75,11 @@ while not terminado:
                     laberinto[posicion[0]][posicion[1]] = '.'
                     movimientos.append('Izquierda')
                     i =+ 1
+                    os.system('cls')
+                    print(laberinto[0])
+                    print(laberinto[1])
+                    print(laberinto[2])
+                    print(laberinto[3])
+                    print(laberinto[4])
+                    time.sleep(1)
 
