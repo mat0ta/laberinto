@@ -14,6 +14,8 @@ for i in muro:
 
 laberinto[4][4] = 's'
 laberinto[0][0] = '.'
+for i in range(0, 5):
+    print(laberinto[i])
 
 posicion = [0, 0]
 terminado = False
@@ -29,11 +31,8 @@ while not terminado:
         movimientos.append('Abajo')
         i =+ 1
         os.system('cls')
-        print(laberinto[0])
-        print(laberinto[1])
-        print(laberinto[2])
-        print(laberinto[3])
-        print(laberinto[4])
+        for i in range(0, 5):
+            print(laberinto[i])
         time.sleep(1)
     else:
         posicion[0] = posicion[0] - 1
@@ -43,11 +42,8 @@ while not terminado:
             movimientos.append('Derecha')
             i =+ 1
             os.system('cls')
-            print(laberinto[0])
-            print(laberinto[1])
-            print(laberinto[2])
-            print(laberinto[3])
-            print(laberinto[4])
+            for i in range(0, 5):
+                print(laberinto[i])
             time.sleep(1)
         else:
             posicion[1] = posicion[1] - 1
@@ -57,11 +53,8 @@ while not terminado:
                 movimientos.append('Arriba')
                 i =+ 1
                 os.system('cls')
-                print(laberinto[0])
-                print(laberinto[1])
-                print(laberinto[2])
-                print(laberinto[3])
-                print(laberinto[4])
+                for i in range(0, 5):
+                    print(laberinto[i])
                 time.sleep(1)
             else:
                 posicion[0] = posicion[0] + 1
@@ -71,10 +64,7 @@ while not terminado:
                     movimientos.append('Izquierda')
                     i =+ 1
                     os.system('cls')
-                    print(laberinto[0])
-                    print(laberinto[1])
-                    print(laberinto[2])
-                    print(laberinto[3])
-                    print(laberinto[4])
+                    for i in range(0, 5):
+                        print(laberinto[i])
                     time.sleep(1)
 
