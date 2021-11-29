@@ -13,12 +13,7 @@ for i in muro:
     laberinto[int(i[0])][int(i[1])] = 'x'
 
 laberinto[4][4] = 's'
-
-print(laberinto[0])
-print(laberinto[1])
-print(laberinto[2])
-print(laberinto[3])
-print(laberinto[4])
+laberinto[0][0] = '.'
 
 posicion = [0, 0]
 terminado = False
