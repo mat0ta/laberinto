@@ -13,7 +13,7 @@ for i in muro:
     laberinto[int(i[0])][int(i[1])] = 'x'
 
 laberinto[4][4] = 's'
-laberinto[0][0] = '.'
+laberinto[0][0] = 'i'
 for i in range(0, 5):
     print(laberinto[i])
 
@@ -67,4 +67,3 @@ while not terminado:
                     for i in range(0, 5):
                         print(laberinto[i])
                     time.sleep(1)
-
