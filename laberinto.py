@@ -20,3 +20,39 @@ print(laberinto[3])
 print(laberinto[4])
 
 # os.system('cls')
+
+posicion = [0, 0]
+terminado = False
+movimientos = []
+i = 0
+while not terminado:
+    posicion[0] = posicion[0] + 1
+    if laberinto[posicion[0]][posicion[1]] == 's':
+        print(movimientos)
+        break
+    if laberinto[posicion[0]][posicion[1]] == ' ':
+        laberinto[posicion[0]][posicion[1]] = '.'
+        movimientos.append('Abajo')
+        i =+ 1
+    else:
+        posicion[0] = posicion[0] - 1
+        posicion[1] = posicion[1] + 1
+        if laberinto[posicion[0]][posicion[1]] == ' ':
+            laberinto[posicion[0]][posicion[1]] = '.'
+            movimientos.append('Derecha')
+            i =+ 1
+        else:
+            posicion[1] = posicion[1] - 1
+            posicion[0] = posicion[0] - 1
+            if laberinto[posicion[0]][posicion[1]] == ' ':
+                laberinto[posicion[0]][posicion[1]] = '.'
+                movimientos.append('Arriba')
+                i =+ 1
+            else:
+                posicion[0] = posicion[0] + 1
+                posicion[1] = posicion[1] - 1
+                if laberinto[posicion[0]][posicion[1]] == ' ':
+                    laberinto[posicion[0]][posicion[1]] = '.'
+                    movimientos.append('Izquierda')
+                    i =+ 1
+
