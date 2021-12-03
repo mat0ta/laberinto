@@ -26,48 +26,48 @@ laberinto[4][4] = 's'
 laberinto[0][0] = 'i'
 
 while True:
-posicion[0] = posicion[0] + 1
-if laberinto[posicion[0]][posicion[1]] == 's':
-    print(movimientos)
-    break
-if laberinto[posicion[0]][posicion[1]] == ' ':
-    laberinto[posicion[0]][posicion[1]] = '.'
-    movimientos.append('Abajo')
-    i =+ 1
-    os.system('cls')
-    for i in range(0, 5):
-        print(laberinto[i])
-    time.sleep(1)
-else:
-    posicion[0] = posicion[0] - 1
-    posicion[1] = posicion[1] + 1
+    posicion[0] = posicion[0] + 1
+    if laberinto[posicion[0]][posicion[1]] == 's':
+        print(movimientos)
+        break
     if laberinto[posicion[0]][posicion[1]] == ' ':
         laberinto[posicion[0]][posicion[1]] = '.'
-        movimientos.append('Derecha')
+        movimientos.append('Abajo')
         i =+ 1
         os.system('cls')
         for i in range(0, 5):
             print(laberinto[i])
         time.sleep(1)
     else:
-        posicion[1] = posicion[1] - 1
         posicion[0] = posicion[0] - 1
+        posicion[1] = posicion[1] + 1
         if laberinto[posicion[0]][posicion[1]] == ' ':
             laberinto[posicion[0]][posicion[1]] = '.'
-            movimientos.append('Arriba')
+            movimientos.append('Derecha')
             i =+ 1
             os.system('cls')
             for i in range(0, 5):
                 print(laberinto[i])
             time.sleep(1)
         else:
-            posicion[0] = posicion[0] + 1
             posicion[1] = posicion[1] - 1
+            posicion[0] = posicion[0] - 1
             if laberinto[posicion[0]][posicion[1]] == ' ':
                 laberinto[posicion[0]][posicion[1]] = '.'
-                movimientos.append('Izquierda')
+                movimientos.append('Arriba')
                 i =+ 1
                 os.system('cls')
                 for i in range(0, 5):
                     print(laberinto[i])
                 time.sleep(1)
+            else:
+                posicion[0] = posicion[0] + 1
+                posicion[1] = posicion[1] - 1
+                if laberinto[posicion[0]][posicion[1]] == ' ':
+                    laberinto[posicion[0]][posicion[1]] = '.'
+                    movimientos.append('Izquierda')
+                    i =+ 1
+                    os.system('cls')
+                    for i in range(0, 5):
+                        print(laberinto[i])
+                    time.sleep(1)
