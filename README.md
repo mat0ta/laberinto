@@ -10,3 +10,4 @@ Esta actividad ha sido realizada por [mat0ta](https://github.com/mat0ta/)
 
 El código escrito para la actividad sigue el siguiente [diagrama de flujo](https://github.com/mat0ta/laberinto/blob/main/diagrama_laberinto.png):
 
+![Diagrama de Laberinto](https://github.com/mat0ta/laberinto/blob/main/diagrama_laberinto.png)
