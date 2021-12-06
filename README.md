@@ -14,6 +14,10 @@ El código escrito para la actividad sigue el siguiente [diagrama de flujo](http
 
 ---
 
+El laberinto se crea empleando la lista de coordenada aportadas para realizar la actividad (variable **muro**). Esta registra la posición del muro que delimita el laberinto. Se crea 1 array con 5 arrays vacías en su interior. Acto seguido, empleando el **muro** se indexan estas arrays y empleando un loop **for** se van colocando las X en los lugares correspondientes. A parte, se colocan en inicio (i) y el final (s):
+
+![Creacion](https://github.com/mat0ta/laberinto/blob/main/creacion.png)
+
 El [código](https://github.com/mat0ta/laberinto/blob/main/laberinto.py) empleado para la actividad está basado en un **while loop** el cual cesará con un **break** en la línea *32* ejecutado por la condición de que se haya alcanzado el fin del laberinto, printeando los movimientos realizados:
 
 ![Break](https://github.com/mat0ta/laberinto/blob/main/snapshots/break.png)
